@@ -22,7 +22,7 @@ app.set('view engine', 'ejs');
 var con = mysql.createConnection({
   database: "yourtests",
   host: "127.0.0.1",
-  port: "3307",
+  port: "3306",
   user: "root",
   password: "root"
 });
@@ -65,7 +65,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 
 console.log('server listening at http://127.0.0.1 over port: ', port);
 
